@@ -50,3 +50,76 @@ body{
 .home{
   background-color:  rgb(73, 73, 240);
 }
+
+/* contact us css*/
+.contactus{
+  padding: 10px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  /* background-color: red; */
+}
+.contactus .box{
+  padding: 10px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  background-color: #FEFEFE;
+  color: #020202;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: #020202 1px 2px 10px 0px,#aeaeae 1px 2px 10px 0px;
+}
+.contactus .box .form{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.contactus .box .form .input{
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactus .box .form .input label{
+  font-size: 18px;
+  padding: 5px 10px;
+  color: #222 ;
+}
+
+
+.contactus .box .form .input input{
+  padding: 8px 15px;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  color: #222;
+  border-radius: 4px;
+  /* border:1px solid #555; */
+  box-shadow: #555 1px 1px 3px 0px,#aeaeae 1px 1px 3px 0px;
+
+}
+.contactus .box .form  .submitbutton {
+  padding: 8px 15px;
+  display: flex;
+  justify-content: center;
+} 
+.contactus .box .form .submitbutton button{
+  padding: 8px 15px;
+  min-width: 120px;
+  border: none;
+  text-align: center;
+  color:#fff;
+  font-size: 18px;
+  border-radius: 5px;
+  background-color: rgb(40, 40, 236);
+  cursor: pointer;
+  font-family:'Times New Roman', Times, serif;
+}
+.contactus .box .form .submitbutton button:hover{
+  background-color: blue;
+}

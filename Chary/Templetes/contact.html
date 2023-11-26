@@ -3,9 +3,30 @@
 {%  block title %}
 Contact Us
 {% endblock title %}
-
 {%  block body %}
-<div>this is contact us page</div>
-{% csrf_token %}
+<div class="contactus">
+  <div class="box">
+    <h1>Register<h1>
+    
+    <form class="form" method="post" action='/contact'>
+    {% csrf_token %}
+      <div class="input">
+        <label>Username</label>
+        <input type="text" placeholder="Username" />
+      </div>
+      <div class="input">
+        <label>Email</label>
+        <input type="email" placeholder="Email" />
+      </div>
+      <div class="input">
+        <label>Password</label>
+        <input type="password" placeholder="Password" />
+      </div>
+      <div class="submitbutton">
+        <button class="button" type="submit">Submit</button>
+      </div>
+    </form>
 
+  </div>
+</div>
 {% endblock body %}
