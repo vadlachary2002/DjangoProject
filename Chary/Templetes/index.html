@@ -5,5 +5,13 @@ Home Page
 {% endblock title %}
 
 {%  block body %}
-<div>this is home</div>
+<div>
+  {% for contact in contacts  %}
+    <div>
+      <span>{{contact.username}} </span>
+      <span>{{contact.email}}</span>
+      <span>{{contact.password}}</span>
+    </div>
+  {% endfor %}
+</div>
 {% endblock body %}

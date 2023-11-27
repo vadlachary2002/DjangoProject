@@ -1,13 +1,14 @@
 from django.shortcuts import render,HttpResponse
 from Home.models import Contact
 from datetime import datetime
+
+from django.contrib import messages
+
 # Create your views here.
 def index(request):
   # return HttpResponse("this is home page")
-  context = {
-    'name':"homeu"
-  }
-  return render(request,'index.html',context)
+  contacts =  Contact.objects.all()
+  return render(request,'index.html',{"contacts":contacts})
 
 def services(request):
   context = {
@@ -34,6 +35,7 @@ def contact(request):
     password = request.POST.get('password')
     con = Contact(username=username, email=email,password=password)
     con.save()
+    messages.success(request, "Details added successfully")
   return render(request,'contact.html',{
       'name':"about"
     })

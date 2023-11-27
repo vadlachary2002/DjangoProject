@@ -15,6 +15,15 @@
       <li><a href="/about">About</a> </li>
       <li class="active" ><a href="/login" >Login</a> </li>
   </div>
+  <div class='messaggeBox'>
+    {% if messages %}
+    <ul>
+      {% for message in  messages %}
+        <li>{{message}} </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
   {% block body %}Chary Web {% endblock body %}
 </body>
 </html>

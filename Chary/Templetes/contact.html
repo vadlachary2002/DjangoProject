@@ -11,18 +11,15 @@ Contact Us
     <form class="form" method="post" action='/contact'>
     {% csrf_token %}
       <div class="input">
-        <label>Username</label>
         <input type="text" placeholder="Username" name="username" />
       </div>
       <div class="input">
-        <label>Email</label>
         <input type="email" placeholder="Email" name="email" />
       </div>
       <div class="input">
-        <label>Password</label>
         <input type="password" placeholder="Password" name="password" />
       </div>
-      <div class="submitbutton">
+      <div class="input">
         <button class="button" type="submit">Submit</button>
       </div>
     </form>
