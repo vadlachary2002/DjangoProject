@@ -8,7 +8,12 @@ from django.contrib import messages
 def index(request):
   # return HttpResponse("this is home page")
   contacts =  Contact.objects.all()
-  return render(request,'index.html',{"contacts":contacts})
+  names=[]
+  if request.method =="POST":
+    names.append(request.POST.get('name'))
+  else:
+    names=["chary"]
+  return render(request,'index.html',{"contacts":contacts,"names":names})
 
 def services(request):
   context = {

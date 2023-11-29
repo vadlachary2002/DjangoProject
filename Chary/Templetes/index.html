@@ -3,8 +3,7 @@
 {%  block title %}
 Home Page
 {% endblock title %}
-
-{%  block body %}
+{% block body %}
 <div>
   {% for contact in contacts  %}
     <div>
@@ -13,5 +12,21 @@ Home Page
       <span>{{contact.password}}</span>
     </div>
   {% endfor %}
+
+  <div>
+    <form action="/" method="post">
+      {% csrf_token %}
+      <input type="text" name="name" />
+      <input type="hidden" name="prevnames" value={{names}} />
+      <input type="submit" value="add"/>
+    </form>
+  </div>
+  <div>
+    <ul>
+    {% for name in names  %}
+      <li> {{name}} </li>
+    {% endfor %}
+    <ul>
+  </div>
 </div>
 {% endblock body %}
